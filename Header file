@@ -1,0 +1,12 @@
+//HEADER FILE //
+#include<stdio.h>//meaning  standard buffered input/output-use for displaying some statement,stderr Standard error output stream, stdin  Standard input stream, stdout Standard output stream,also use for sprintf,printf,sscanf;
+#include<unistd.h>//meaning standard symbolic constants and types,use for creating pipe, F_OK   Test for existence of file,R_OK   Test for read permission,W_OK   Test for write permission,X_OK   Test for execute (search) permission,also use for fork process,execl process;
+#include<fcntl.h>//meaning file control options,use for read write into a file;
+#include<stdlib.h>//meaning standard library definitions,use for malloc;
+#include<sys/types.h>//for pid declearation;
+#include<sys/wait.h>
+
+int add();
+int sub();
+int multi();
+int pid;
