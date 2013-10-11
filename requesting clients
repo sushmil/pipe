@@ -1,0 +1,65 @@
+//requesting client for addition//
+
+#include"header.h"
+int main(int argc,char *argv[])
+{
+ printf("******************welcome requesting client**********************\n");
+ int opr=5,opr1=4,rfd,wfd;
+ char opr2,*a,*b;
+ opr2='+';
+ b=(char *)malloc(sizeof(char));
+ a=(char *)malloc(sizeof(char));
+ sscanf(argv[1],"%d",&rfd);
+ sscanf(argv[2],"%d",&wfd);
+ sprintf(a,"%d%c%d",opr,opr2,opr1);
+ write(wfd,a,9);
+ printf("processing\n");
+ waitpid(pid,NULL,0);
+ read(rfd,b,10);
+ printf("****************your solution is %s************* \n",b);
+ return 0;
+}
+
+
+//reguesting client for subtraction//
+
+#include"header.h"
+int main(int argc,char *argv[])
+{
+ printf("******************welcome requesting client**********************\n");
+ int opr=8,opr1=4,rfd,wfd;
+ char opr2,*a,*b;
+ opr2='-';
+ b=(char *)malloc(sizeof(char));
+ a=(char *)malloc(sizeof(char));
+ sscanf(argv[1],"%d",&rfd);
+ sscanf(argv[2],"%d",&wfd);
+ sprintf(a,"%d%c%d",opr,opr2,opr1);
+ write(wfd,a,9);
+ printf("processing\n");
+ waitpid(pid,NULL,0);
+ read(rfd,b,10);
+ printf("****************your solution is %s************* \n",b);
+ return 0;
+}
+
+//requesting client for multiplication//
+#include"header.h"
+int main(int argc,char *argv[])
+{
+ printf("******************welcome requesting client**********************\n");
+ int opr=2,opr1=4,rfd,wfd;
+ char opr2,*a,*b;
+ opr2='8';
+ b=(char *)malloc(sizeof(char));
+ a=(char *)malloc(sizeof(char));
+ sscanf(argv[1],"%d",&rfd);
+ sscanf(argv[2],"%d",&wfd);
+ sprintf(a,"%d%c%d",opr,opr2,opr1);
+ write(wfd,a,9);
+ printf("processing\n");
+ waitpid(pid,NULL,0);
+ read(rfd,b,10);
+ printf("****************your solution is %s************* \n",b);
+ return 0;
+}
