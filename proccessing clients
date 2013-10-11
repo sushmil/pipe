@@ -1,0 +1,68 @@
+//proceesing client for addition//
+
+#include"header.h"
+int main(int argc,char *argv[])
+{
+//printf("welcome to processing client\n");
+int rfd,wfd,opr,opr1,res;
+char *a,*b,opr2;
+a=(char *)malloc(sizeof(char));
+b=(char *)malloc(sizeof(char));
+sscanf(argv[1],"%d",&rfd);
+sscanf(argv[2],"%d",&wfd);
+sscanf(argv[3],"%d%c%d",&opr,&opr2,&opr1);
+//printf("read\n");
+printf("numbers are %d%c%d\n",opr,opr2,opr1);
+res=opr+opr1;
+sprintf(b,"%d",res);
+write(wfd,b,10);
+//printf("end of requesting client\n");
+return 0;
+
+}
+
+//processing client for subtraction//
+
+#include"header.h"
+int main(int argc,char *argv[])
+{
+//printf("welcome to processing client\n");
+int rfd,wfd,opr,opr1,res;
+char *a,*b,opr2;
+a=(char *)malloc(sizeof(char));
+b=(char *)malloc(sizeof(char));
+sscanf(argv[1],"%d",&rfd);
+sscanf(argv[2],"%d",&wfd);
+sscanf(argv[3],"%d%c%d",&opr,&opr2,&opr1);
+//printf("read\n");
+printf("numbers are %d%c%d\n",opr,opr2,opr1);
+res=opr-opr1;
+sprintf(b,"%d",res);
+write(wfd,b,10);
+//printf("end of requesting client\n");
+return 0;
+
+}
+
+//processing client for multiplication//
+
+#include"header.h"
+int main(int argc,char *argv[])
+{
+//printf("welcome to processing client\n");
+int rfd,wfd,opr,opr1,res;
+char *a,*b,opr2;
+a=(char *)malloc(sizeof(char));
+b=(char *)malloc(sizeof(char));
+sscanf(argv[1],"%d",&rfd);
+sscanf(argv[2],"%d",&wfd);
+sscanf(argv[3],"%d%c%d",&opr,&opr2,&opr1);
+//printf("read\n");
+printf("numbers are %d%c%d\n",opr,opr2,opr1);
+res=opr*opr1;
+sprintf(b,"%d",res);
+write(wfd,b,10);
+//printf("end of requesting client\n");
+return 0;
+
+}
