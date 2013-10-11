@@ -1,18 +1,40 @@
-# Object files
-*.o
-*.ko
 
-# Libraries
-*.lib
-*.a
+//THIS IS MAIN SERVER PROGRAM//
 
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
+#include"header.h"
+int main()
+{
+printf("welcom1\n");
+add();
+printf("wlcme\n");
+sub();
+printf("wlme\n");
+multi();
+}
+int add()
+{
 
-# Executables
-*.exe
-*.out
-*.app
+   int ret,ret2,fd[2],fd1[2];
+   pipe(fd),pipe(fd1);
+   char *a,*b, rfd[4],wfd[4],rfd1[4],wfd1[4];
+   a=(char *)malloc(sizeof(char));
+   b=(char *)malloc(sizeof(char));
+   ret=fork();
+   if(ret>=0)
+   {
+        if(ret==0)
+         {
+          sprintf(rfd,"%d",fd[0]);
+          sprintf(wfd,"%d",fd[1]);
+          execl("./c1","c1",rfd,wfd,NULL);
+         }
+        else
+         {
+          read(fd[0],a,9);
+//        printf("your query is for addition \n");
+          ret2=fork();
+          pid=ret2;
+          if(ret2>=0)
+            {
+             if(ret2==0)
+                                                                                                                                    6,1           Top
