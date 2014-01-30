@@ -36,4 +36,113 @@ int add()
           if(ret2>=0)
             {
              if(ret2==0)
+             {
+		 sprintf(rfd1,"%d",fd1[0]);
+                 sprintf(wfd1,"%d",fd1[1]);
+		 execl("./p1","p1",rfd1,wfd1,a,NULL);
+		}
+		else
+		{
+		read(fd1[0],b,10);
+		printf("server%s\n",b);
+		write(fd[1],b,10);
+		waitpid(ret2,NULL,0);
+		}
+	    
+	
+}
+}
+	waitpid(ret,NULL,0);
+}
+  return 0;
+}
+
+int sub()
+{
+   int ret,ret2,fd[2],fd1[2];
+   pipe(fd),pipe(fd1);
+   char *a,*b, rfd[4],wfd[4],rfd1[4],wfd1[4];
+   a=(char *)malloc(sizeof(char));
+   b=(char *)malloc(sizeof(char));
+   ret=fork();
+   if(ret>=0)
+   {
+        if(ret==0)
+         {
+          sprintf(rfd,"%d",fd[0]);
+          sprintf(wfd,"%d",fd[1]);
+          execl("./c2","c2",rfd,wfd,NULL);
+         }
+        else
+         {
+          read(fd[0],a,9);
+           ret2=fork();
+           pid=ret2;
+          if(ret2>=0)
+            {
+             if(ret2==0)
+                {
+                 sprintf(rfd1,"%d",fd1[0]);
+                 sprintf(wfd1,"%d",fd1[1]);
+                 execl("./p2","p2",rfd1,wfd1,a,NULL);
+                }
+                else
+                {
+                read(fd1[0],b,10);
+                printf("server%s\n",b);
+                write(fd[1],b,10);
+                waitpid(ret2,NULL,0);
+                }
+
+
+}
+}
+        waitpid(ret,NULL,0);
+}
+  return 0;
+}
+int multi()
+{
+   int ret,ret2,fd[2],fd1[2];
+   pipe(fd),pipe(fd1);
+   char *a,*b, rfd[4],wfd[4],rfd1[4],wfd1[4];
+   a=(char *)malloc(sizeof(char));
+   b=(char *)malloc(sizeof(char));
+   ret=fork();
+   if(ret>=0)
+   {
+        if(ret==0)
+         {
+          sprintf(rfd,"%d",fd[0]);
+          sprintf(wfd,"%d",fd[1]);
+          execl("./c3","c3",rfd,wfd,NULL);
+         }
+        else
+         {
+          read(fd[0],a,9);
+           ret2=fork();
+           pid=ret2;
+         if(ret2>=0)
+            {
+             if(ret2==0)
+                {
+                 sprintf(rfd1,"%d",fd1[0]);
+                 sprintf(wfd1,"%d",fd1[1]);
+                 execl("./p3","p3",rfd1,wfd1,a,NULL);
+                }
+                else
+                {
+                read(fd1[0],b,10);
+                printf("server%s\n",b);
+                write(fd[1],b,10);
+                waitpid(ret2,NULL,0);
+                }
+
+
+}
+}
+        waitpid(ret,NULL,0);
+}
+  return 0;
+}
                                                                                                                                     6,1           Top
